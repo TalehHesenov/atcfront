@@ -1,0 +1,437 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+#header{
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    .header_top{
+        width: 94%;
+        margin: 0 auto;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .top_left{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            img{
+                width: 90px;
+            }
+
+            select{
+                width: 60px;
+                padding: 0 5px;
+                height: 30px;
+                color: #fff;
+                background-color: transparent;
+                font-family: "Poppins", sans-serif;
+                cursor: pointer;
+
+                option{
+                    color: #000;
+                   
+                }
+            }
+
+            a{
+                font-family: "Poppins", sans-serif;
+                color: #fff;
+                font-size: 16px;
+                transition: 0.5s;
+
+                &:hover{
+                    color: rgb(0, 255, 0);
+                }
+            }
+        }
+        .top_right{
+            display: flex;
+            gap: 10px;
+            a{
+                font-family: "Poppins", sans-serif;
+                font-size: 14px;
+                position: relative;
+                padding: 7px 10px;
+                background-color: #3335c0;
+                color: #fff;
+                border-radius: 5px;
+                transition: all 0.5s;
+                z-index: 1;
+
+                &:nth-child(1){
+                     &::before{
+                    content: "";
+                    position: absolute;
+                    height: 100%;
+                    width: 0%;
+                    top: 0;
+                    left: 0;
+                    background-color: #3f3f3f;
+                    border-radius: 5px;
+                    transition: all 0.5s;
+                    z-index: -1;
+                }  
+
+
+                &:hover::before{
+                    width: 100%;
+                }
+
+                }
+                &:nth-child(2){
+                     &::before{
+                    content: "";
+                    position: absolute;
+                    height: 0%;
+                    width: 100%;
+                    bottom: 0;
+                    left: 0;
+                    background-color: #3f3f3f;
+                    border-radius: 5px;
+                    transition: all 0.5s;
+                    z-index: -1;
+                }  
+
+
+                &:hover::before{
+                    height: 100%;
+                }
+
+                }
+
+                &:nth-child(3){
+                    
+                
+                    &::before{
+                        content: "";
+                        position: absolute;
+                        height: 100%;
+                        width: 0%;
+                        top: 0;
+                        right: 0;
+                        background-color: #3f3f3f;
+                        border-radius: 5px;
+                        transition: all 0.5s;
+                        z-index: -1;
+                    } 
+                    &:hover::before{
+                        width: 100%;
+                    }
+                                
+                            }
+
+                            &:hover{
+                                i{
+                                    color: greenyellow;
+                                }
+                            }
+
+                
+                i{
+                    margin-right: 5px;
+                    color: #fff;
+                    transition: all 0.5s;
+                }
+            
+            }
+        }
+
+    }
+
+    .header_main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80px;
+        ul{
+
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+
+            li{
+                position: relative;
+                &:hover{
+
+                    .institusional{
+                       visibility: visible;
+                    }
+                }
+               
+                a{
+                    font-family: "Poppins", sans-serif;
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 10px;
+                    font-size: 18px;
+                    color: #fff;
+                    font-weight: 500;
+                    transition: all 0.5s;
+
+
+                    i{
+                        transform: rotate(-90deg);
+                        transition: all 0.5s;
+                        
+                    }
+                }
+
+                &::before{
+                    content: '';
+                    position: absolute;
+                    height: 2px;
+                    width: 0;
+                    bottom: -5px;
+                    left: 0;
+                    background-color: #0004f7;
+                    transition: all 0.5s;
+
+                }
+              
+                &:hover::before{
+                    width: 100%;
+                }  
+                &:hover{
+                    i{
+                        transform: rotate(0);
+                        color: #b1b1b1;
+                    }
+                }
+                
+                .active{
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        height: 2px;
+                        width: 100%;
+                        bottom: -5px;
+                        left: 0;
+                        background-color: #08f700;
+                        transition: all 0.5s;
+
+                    }
+                }
+
+                .institusional{
+                    position: absolute;
+                    top: 30px;
+                    left: -15px;
+                    background-color: #b1b1b1;
+                    width: 200px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+                    border-radius: 5px;
+                    padding: 10px 0;
+                    visibility: hidden;
+                    transition: all 0.2s;
+                    
+
+                    li{
+                        border-bottom: 1px solid #000;
+                       padding: 5px 0;
+                        width: 100%;
+                    
+                        &::before{
+                            content: '';
+                            position: absolute;
+                            height: 2px;
+                            width: 0;
+                            bottom: 0px;
+                            left: 0;
+                            background-color: #0004f7;
+                            transition: all 0.5s;
+        
+                        }
+                      
+                        &:hover::before{
+                            width: 100%;
+                        }  
+
+                        
+                        a{
+                            color: #000;
+                            transition: none;
+                            
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
+#section1{
+    width: 100%;
+    position: relative;
+    background: linear-gradient(rgb(30 30 30 / 68%), rgb(30 30 30 / 68%)), url(/src/img/atc_yeterlilik_sertifikalari.jpg) ;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 700px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h2{
+        font-size: 65px;
+    font-weight: 100;
+    margin-bottom: 20px;
+    color: #0004f7;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+
+    span{
+        color: #ececec;&:nth-child(1){
+            color: #08f700;
+        }
+    }
+    }
+
+    h3{
+
+        font-family: "Poppins", sans-serif;
+        font-size: calc(1.3rem + .6vw);
+        margin-bottom: 1rem;
+        line-height: 1.2;
+        color: #fff;
+        
+
+    }
+    p{
+        font-family: "Poppins", sans-serif;
+        color: rgb(255 255 255 / 80%);
+        margin-bottom: 30px;
+        font-size: 1.2rem;
+    }
+
+    .section1_buttons{
+        display: flex;
+        align-items: center;
+        a{
+            font-family: "Poppins", sans-serif;
+            transition: 0.5s;
+
+            &:nth-child(1){
+                font-size: 14px;
+                font-weight: 700;
+                letter-spacing: 1px;
+                padding: 14px 40px;
+                border-radius: 50px;
+                transition: 0.3s;
+                color: #ffffff;
+                background: rgba(255, 255, 255, 0.1);
+                box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+                border: 2px solid #dedede;
+                position: relative;
+                z-index: 1;
+                overflow: hidden;
+
+                &::before{
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 0;
+                    height: 100%;
+                    background-color: rgba(0, 0, 0, 0.507);
+                    border-radius: 50px;
+                    z-index: -1;
+                    transition: all 0.5s;
+                }
+
+                &:hover::before{
+                    width: 100%;
+                }
+            }
+
+            &:nth-child(2){
+                font-size: 18px;
+                color: #f85a40;
+               display: flex;
+               align-items: center;
+
+               &:hover{
+                i{
+                    color: #fff;
+                }
+               }
+}
+             
+            }
+            i{
+                transition: 0.5s;
+                margin: 0 10px 0 25px;
+                color: #f85a40;
+                font-size: 35px;
+            }
+        }
+    }
+.waves-wraper {
+    position: relative;
+    margin-top: -137px;
+    overflow: hidden;
+
+    .waves {
+        position: relative;
+        width: 100%;
+        height: 15vh;
+        margin-bottom: -7px;
+        min-height: 150px;
+        max-height: 150px;
+    }
+    
+    img, svg {
+        vertical-align: middle;
+    }
+
+    .parallax > use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+}
+.parallax > use {
+    animation: identifier 25s cubic-bezier(.55,.5,.45,.5) infinite;
+}
+
+.parallax > use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+}
+    
+}
+
+
+@keyframes identifier {
+    0% {
+        transform: translate3d(-90px, 0, 0);
+    }
+    100% {
+        transform: translate3d(85px, 0, 0);
+    }
+    
+}
